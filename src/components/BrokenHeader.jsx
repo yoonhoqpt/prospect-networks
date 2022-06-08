@@ -1,33 +1,28 @@
 import React, { Component } from "react";
-import {Container, IconButton, AppBar, Typography, Grow, Grid, Box, Link, CssBaseline, Toolbar, Button} from '@material-ui/core';
-import useStyles from './styles.js';
-import { withStyles } from '@material-ui/core/styles';
-import { ReactDOM } from "react";
+import {AppBar, Typography, Grid, Link, Toolbar} from '@mui/material';
+import {StyledText} from './styles.js';
 
 
 /** -------------APPBAR COMPONENT---------------
  * At the top of all pages, includes relevant links.
  * FIXES: item links, style, etc. 
  */
-class Header extends React.Component {
+class Header extends Component {
+    
     render() {
-        const useStyles = theme => ({
-            root: {
-                flexGrow: 1
-            }
-        })
         return (
         <div> 
             <AppBar position="static" color='transparent' elevation='0' alignItems="center">
                 <Toolbar>
-                    
-                    <h1> FIXME: LOGO HERE </h1>
+
+                    <h1>FIXME: LOGO</h1>
                     
                     <Grid container alignItems="center" justifyContent='flex-end' spacing={2}>
 
-                        <Grid item>
+                    
+                        <Grid item >
                             <Link href={"/employers"}>
-                                <Typography style={{display: 'inline-block'}} className="headinglr" noWrap>
+                                <Typography noWrap>
                                     Employers
                                 </Typography>
                             </Link>
@@ -35,7 +30,7 @@ class Header extends React.Component {
 
                         <Grid item>
                             <Link href={"/profile/login"}>
-                                <Typography style={{display: 'inline-block'}} className="headinglr" noWrap>
+                                <Typography>
                                     Log in
                                 </Typography>
                             </Link>
@@ -43,7 +38,7 @@ class Header extends React.Component {
 
                         <Grid item>
                             <Link href={"/profile/sign-up"}>
-                                <Typography style={{display: 'inline-block'}} className={useStyles.headinglr} noWrap>
+                                <Typography noWrap>
                                     Sign up
                                 </Typography>
                             </Link>
@@ -55,8 +50,7 @@ class Header extends React.Component {
         </div>
         )
     }
-
+    
 }
 
-export default withStyles(useStyles)(Header);
-
+export default Header;
