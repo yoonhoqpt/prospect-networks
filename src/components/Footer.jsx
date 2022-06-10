@@ -1,10 +1,25 @@
 import React, { Component } from "react";
-import {Container, IconButton, AppBar, Typography, Grow, Grid, Box, Link, CssBaseline, Toolbar, Button} from '@material-ui/core';
-import useStyles from './styles.js';
-import { makeStyles } from '@material-ui/core/styles';
+import { ThemeProvider } from "styled-components";
+import { Footer } from "@mui/material";
+import { Typography } from "@mui/material";
+import theme from '../theme';
 
-class Footer extends Component {
+/**LINKS: back to top, ... 
+ * FIXMES: add Links
+  */
+class BottomFooter extends Component {
     render() {
+        return (
         
+        <ThemeProvider theme={theme}>
+            <div>
+                <Typography color='white'>
+                    2022 Prospect Networks Inc.
+                </Typography>
+            </div>
+        </ThemeProvider>
+        )
     }
 }
+
+export default BottomFooter;

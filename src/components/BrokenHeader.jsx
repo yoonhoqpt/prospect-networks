@@ -3,6 +3,7 @@ import {AppBar, Typography, Grid, Link, Toolbar} from '@mui/material';
 import {StyledText} from './styles.js';
 
 
+
 /** -------------APPBAR COMPONENT---------------
  * At the top of all pages, includes relevant links.
  * FIXES: item links, style, etc. 
@@ -11,6 +12,7 @@ class Header extends Component {
     
     render() {
         return (
+        
         <div> 
             <AppBar position="static" color='transparent' elevation='0' alignItems="center">
                 <Toolbar>

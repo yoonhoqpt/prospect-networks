@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import {Toolbar, AppBar, Grid, Typography,Link, Button} from '@mui/material';
 import whitelogo from './images/whitelogo.png';
+import theme from '../theme.jsx';
+import { ThemeProvider } from "styled-components";
+import styled from 'styled-components';
 
 class Header extends Component {
     render() {
         return (
+        
             <div>
-                <AppBar color='transparent' position='static'>
+                <AppBar elevation={0} position='static'>
                     <Toolbar>
 
                     <Link href={"./"}>
@@ -50,6 +54,7 @@ class Header extends Component {
             </Grid>
         )
     }
+
 }
 
 export default Header;
