@@ -8,7 +8,7 @@ import styled from 'styled-components';
 class Header extends Component {
     render() {
         return (
-        
+        <ThemeProvider theme={theme}>
             <div>
                 <AppBar elevation={0} position='static'>
                     <Toolbar>
@@ -17,7 +17,7 @@ class Header extends Component {
                         <img src={whitelogo} height={50} />
                     </Link>
 
-                    <Grid container justifyContent='center' spacing={2}>
+                    <Grid container display justifyContent='flex-end' spacing={2}>
                         {this.AppBarItem("About", "./About")}
                         {this.AppBarItem("FAQs","./FAQs")}
                         {this.AppBarItem("Contact", "./Contact")}
@@ -26,7 +26,7 @@ class Header extends Component {
 
                     <Grid container justifyContent='flex-end'>
                         <Button>
-                            <Typography color='white'>
+                            <Typography fontSize={12} color='white'>
                                 Log in
                             </Typography>
                         </ Button>
@@ -35,6 +35,7 @@ class Header extends Component {
                     </Toolbar>
                 </AppBar>
             </div>
+        </ThemeProvider>
         )
     }
 
@@ -47,14 +48,14 @@ class Header extends Component {
         return (
             <Grid item>
                 <Link underline="hover" href={Location}>
-                    <Typography color='white' noWrap>
+                    <Typography fontSize={12} color='secondary' noWrap>
                         {DisplayName}
                     </Typography>
                 </Link>
             </Grid>
         )
     }
-
+    
 }
 
 export default Header;

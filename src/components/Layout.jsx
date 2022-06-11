@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
 
-export default function Layout({ children }) {
-    return (
-        <div>
-            <Header />
-                {children}
-            <Footer />
-        </div>
-        
-    )
-    
+class Layout extends Component {
+    render() {
+        return (
+            <>
+                <Header />
+                    <main>{this.props.children}</main>
+                <Footer />
+            </>
+            
+        )
+    }
 }
+
+export default Layout;
 

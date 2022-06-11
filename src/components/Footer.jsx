@@ -1,25 +1,27 @@
 import React, { Component } from "react";
 import { ThemeProvider } from "styled-components";
-import { Footer } from "@mui/material";
+import { BottomNavigation } from "@mui/material";
 import { Typography } from "@mui/material";
 import theme from '../theme';
 
 /**LINKS: back to top, ... 
  * FIXMES: add Links
   */
-class BottomFooter extends Component {
+class Footer extends Component {
     render() {
         return (
-        
         <ThemeProvider theme={theme}>
-            <div>
-                <Typography color='white'>
-                    2022 Prospect Networks Inc.
-                </Typography>
-            </div>
+
+            <BottomNavigation theme={theme}>
+            <Typography fontSize={12} color='white'>
+                2022 Prospect Networks Inc.
+            </Typography>
+        </BottomNavigation>
+
         </ThemeProvider>
+        
         )
     }
 }
 
-export default BottomFooter;
+export default Footer;
