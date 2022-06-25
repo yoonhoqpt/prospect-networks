@@ -1,40 +1,36 @@
 import React, { Component } from "react";
-import {Toolbar, AppBar, Grid, Typography,Link, Button} from '@mui/material';
+import {Toolbar, AppBar, Grid, Typography,Link, Button, ThemeProvider} from '@mui/material';
 import whitelogo from './images/whitelogo.png';
 import theme from '../theme.jsx';
-import { ThemeProvider } from "styled-components";
-import styled from 'styled-components';
 
 class Header extends Component {
     render() {
         return (
-        <ThemeProvider theme={theme}>
-            <div>
-                <AppBar elevation={0} position='static'>
-                    <Toolbar>
-
+        <ThemeProvider theme={theme}>            
+            <AppBar elevation={0} position='static' >
+                <Toolbar>
+                    <Grid container alignItems='center' justify='space-between' spacing={40}>   
+                    <Grid item>
                     <Link href={"./"}>
-                        <img src={whitelogo} height={50} />
-                    </Link>
-
-                    <Grid container display justifyContent='flex-end' spacing={2}>
-                        {this.AppBarItem("About", "./About")}
-                        {this.AppBarItem("FAQs","./FAQs")}
-                        {this.AppBarItem("Contact", "./Contact")}
-                        {this.AppBarItem("Employer", "./Employer")}
+                        <img src={whitelogo} height={50}/>
+                    </Link>   
+                    </Grid>  
+                    <Grid item>
+                        {this.AppBarItem("ABOUT", "./about")}
+                        {this.AppBarItem("FAQs","./faqs")}
+                        {this.AppBarItem("CONTACT", "./contact")}
+                        {this.AppBarItem("EMPLOYERS", "./employer")}     
+                        </Grid>                                          
+                        <Grid item>
+                            <Button>
+                                <Typography fontSize={13} color='secondary'>
+                                    Log in
+                                </Typography>
+                            </ Button>
+                        </Grid>
                     </Grid>
-
-                    <Grid container justifyContent='flex-end'>
-                        <Button>
-                            <Typography fontSize={12} color='white'>
-                                Log in
-                            </Typography>
-                        </ Button>
-                    </Grid>
-
-                    </Toolbar>
-                </AppBar>
-            </div>
+                </Toolbar>
+            </AppBar>            
         </ThemeProvider>
         )
     }
@@ -46,13 +42,13 @@ class Header extends Component {
       */
     AppBarItem(DisplayName, Location) {
         return (
-            <Grid item>
-                <Link underline="hover" href={Location}>
-                    <Typography fontSize={12} color='secondary' noWrap>
+            
+                <Button>
+                    <Typography fontSize={13} color='secondary' noWrap>
                         {DisplayName}
                     </Typography>
-                </Link>
-            </Grid>
+                </Button>
+            
         )
     }
     
