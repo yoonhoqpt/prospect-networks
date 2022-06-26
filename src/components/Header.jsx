@@ -10,7 +10,7 @@ class Header extends Component {
         <Box sx={{mt: 2}}> 
             <AppBar elevation={0} position='static' >
                 <Toolbar>
-                    <Grid container direction='row' justifyContent='center' alignItems='center' spacing={{xs: 0, sm:3, md: 23, lg: 42}} >   
+                    <Grid container direction='row' justifyContent='space-between' alignItems='center' spacing={{xs: 0, sm:3, md: 23, lg: 42}} >   
                     <Grid item>
                     <Link href={"./"}>
                         <img src={whitelogo} height={50}/>
