@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {Toolbar, AppBar, Grid, Typography,Link, Button, ThemeProvider, Box} from '@mui/material';
 import whitelogo from './images/whitelogo.png';
 import theme from '../theme.jsx';
-import IconButton from '@mui/material/IconButton';
 
 class Header extends Component {
     render() {
