@@ -9,7 +9,7 @@ function App() {
   return (
     <Container>    
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline /> 
       <div className="App">
         <Layout>
           <Box sx={{mt: 15}}> 
