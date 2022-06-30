@@ -19,7 +19,7 @@ function App() {
             Finally, a job searching platform that empowers you.
             </Typography>  
             <Box sx={{mt: 2}}>
-            <Button variant='contained' color='secondary' style={{maxWidth: '200px', maxHeight: '50px', minWidth: '200px', minHeight: '50px'}}>
+            <Button href='http://www.myprospect.io/dashboard' variant='contained' color='secondary' style={{maxWidth: '200px', maxHeight: '50px', minWidth: '200px', minHeight: '50px'}}>
               <Typography fontSize={13} color='primary'>
                 <b>Get started</b>
               </Typography>
