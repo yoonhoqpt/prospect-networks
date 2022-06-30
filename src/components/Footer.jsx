@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { ThemeProvider } from "styled-components";
-import { BottomNavigation } from "@mui/material";
-import { Typography } from "@mui/material";
+import { BottomNavigation, Typography, ThemeProvider } from "@mui/material";
 import theme from '../theme';
 
 /**LINKS: back to top, ... 

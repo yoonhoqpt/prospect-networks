@@ -1,62 +1,82 @@
 import Layout from './components/Layout';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Box, Button, Grid } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import theme from './theme';
+import illustration from './components/images/money.png';
+import interview from './components/images/interview.png';
+import ghost from './components/images/ghost.png'
 
 function App() {
-  
   return (
-    <Container>
-
-    
+    <Container>    
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline /> 
       <div className="App">
         <Layout>
-          <Typography color='primary' fontSize={17.6}>
-          Lorem ipsum dolor sit amet, consect
-          etur adipiscing elit. Vivamus at scel
-          erisque lacus. Donec fermentum vitae ex nec sagitt
-          is. Fusce dapibus leo eget euismod pulvinar. Nullam imper
-          diet aliquam justo, a semper turpis dapibus eu. Cras solli
-          citudin facilisis felis, id condimentum urna sollicitu
-          din sed. Phasellus non mi sit amet nisl congue tempus ut
-           a lacus. Donec rutrum augue sit amet lacus feugiat
-            congue. Donec
-           dapibus orci eget sem tempus, non sce
-           lerisque libero finibus. Suspendisse eros lor
-           em, tincidunt faucibu
-           s facilisis nec, tincidunt nec velit. Cras 
-           eu justo feugiat, aliquet nunc vel, euismod 
-           metus. Quisque malesuada porta congue.
-
-          Ut porttitor, leo et aliquet posuere, 
-          nulla elit suscipit eros, sed rhoncus 
-          erat felis sed augue. Integer eu gravid
-          a mi, sodales sodales dui. Lorem ipsum 
-          dolor sit amet, consectetur adipiscing 
-          elit. Integer commodo, erat nec digniss
-          im hendrerit, tellus nulla sagittis qua
-          m, eget pharetra ante mi et nibh. Aliqu
-          am erat volutpat. Pellentesque bibendum
-           maximus magna, eu tincidunt nunc vestibulum ut. 
-           Donec sed lorem a metus lobortis tincidunt si
-           t amet molestie justo. Fusce viverra lacus qui
-           s mi ultricies, ac cursus diam euismod. Ut pha
-           retra elementum nunc, sit amet facilisis est m
-           attis non. Fusce eget tortor vitae neque curs
-           us mollis et vel leo. Nulla facilisi. Vestibul
-           um consectetur vitae odio ac vulputate. Suspen
-           disse potenti. Vivamus metus dui, malesuada qu
-           is imperdiet eget, placerat sed lacus. Morbi p
-           osuere lorem et justo laoreet, eget congue mau
-           ris pretium.
-          </Typography>
+          <Box sx={{mt: 15}}> 
+            <Typography color='secondary' variant='h1'>
+            Finally, a job searching platform that empowers you.
+            </Typography>  
+            <Box sx={{mt: 2}}>
+            <Button href='http://www.myprospect.io/dashboard' variant='contained' color='secondary' style={{maxWidth: '200px', maxHeight: '50px', minWidth: '200px', minHeight: '50px'}}>
+              <Typography fontSize={13} color='primary'>
+                <b>Get started</b>
+              </Typography>
+            </Button>
+            </Box>
+          </Box>          
+          <Box sx={{mt: 20, justifyContent: 'flex-start'}}>          
+            <Grid container direction='row' justifyContent='space-between' alignItems='center'>
+            <Grid item xs={6}>
+              <img src={illustration} height={600}/>
+            </Grid>
+            <Grid item xs={4}>
+              <Box sx={{mb: 10}}>
+              <Typography color='secondary' fontSize='30px'>Every. Single. Job.</Typography>
+              <Typography color='secondary' fontSize='40px'><b>Has a posted salary.</b></Typography>
+              </Box>
+              <Typography color='secondary' fontSize='25px'>Employers are required to post their budget
+               for the role they are looking to fill. The salary range is also restricted to be a reasonable amount. 
+               Establishing salaries beforehand saves times for both job candidates and employers.</Typography>
+            </Grid>
+            </Grid>
+          </Box>
+          <Box sx={{mt: 15}}>
+            <Grid container direction='row' justifyContent='space-between' alignItems='center'>
+            <Grid item xs={4}>
+              <Box sx={{mb: 10}}>
+              <Typography color='secondary' fontSize='30px'>A transparent</Typography>
+              <Typography color='secondary' fontSize='40px'><b>interview process.</b></Typography>
+              </Box>
+              <Typography color='secondary' fontSize='25px'>Save time and make an informed decision by finding out how many 
+              rounds of interviews you must go through before you apply. Prepare better for your initial screening, technical 
+              interview, and cognitive tests. </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <img src={interview} height={500}/>
+            </Grid>
+            </Grid>
+          </Box>
+          <Box sx={{mt: 20, mb: 20, justifyContent: 'flex-start'}}>          
+            <Grid container direction='row' justifyContent='space-between' alignItems='center'>
+            <Grid item xs={6}>
+              <img src={ghost} height={600}/>
+            </Grid>
+            <Grid item xs={4}>
+              <Box sx={{mb: 10}}>
+              <Typography color='secondary' fontSize='30px'>Getting ghosted?</Typography>
+              <Typography color='secondary' fontSize='40px'><b>Let's fix that.</b></Typography>
+              </Box>
+              <Typography color='secondary' fontSize='25px'>As part of our user agreement, employers are required to send a 
+              prompt response within seven business days within the day of receiving your message. This guarantees a response
+              from the employer regarding the initial screening process.</Typography>
+            </Grid>
+            </Grid>
+          </Box>
         </Layout>        
       </div>
     </ThemeProvider>
-
     </Container>
   );
 }
