@@ -11,9 +11,8 @@ class Footer extends Component {
     render() {
         return (
         <ThemeProvider theme={theme}>
-
             <BottomNavigation theme={theme}>
-            <Typography fontSize={12} color='white'>
+            <Typography fontSize={12} color='secondary'>
                 2022 Prospect Networks Inc.
             </Typography>
         </BottomNavigation>

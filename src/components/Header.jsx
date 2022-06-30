@@ -1,23 +1,25 @@
 import React, { Component } from "react";
-import {Toolbar, AppBar, Grid, Typography,Link, Button} from '@mui/material';
-import whitelogo from './images/whitelogo.png';
+import {Box, Toolbar, AppBar, Grid, Typography,Link, Button} from '@mui/material';
+import whitelogo from '../images/whitelogo.png';
 import theme from '../theme.jsx';
 import { ThemeProvider } from "styled-components";
 import styled from 'styled-components';
 
+//FIXME:
 class Header extends Component {
     render() {
         return (
         <ThemeProvider theme={theme}>
-            <div>
-                <AppBar elevation={0} position='static'>
+            {/* FULLSCREEN APPBAR */}
+            <Box sx={{ display: {xs: 'none', sm: 'block'} }}>
+                <AppBar color='transparent' elevation={0} position='static'>
                     <Toolbar>
 
                     <Link href={"./"}>
                         <img src={whitelogo} height={50} />
                     </Link>
-
-                    <Grid container display justifyContent='flex-end' spacing={2}>
+                    
+                    <Grid container display justifyContent='flex-end' position='relative' spacing={2}>
                         {this.AppBarItem("About", "./About")}
                         {this.AppBarItem("FAQs","./FAQs")}
                         {this.AppBarItem("Contact", "./Contact")}
@@ -26,7 +28,7 @@ class Header extends Component {
 
                     <Grid container justifyContent='flex-end'>
                         <Button>
-                            <Typography fontSize={12} color='white'>
+                            <Typography color='secondary' fontSize={12}>
                                 Log in
                             </Typography>
                         </ Button>
@@ -34,7 +36,7 @@ class Header extends Component {
 
                     </Toolbar>
                 </AppBar>
-            </div>
+            </Box>
         </ThemeProvider>
         )
     }
