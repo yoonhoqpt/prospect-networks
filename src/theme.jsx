@@ -13,7 +13,7 @@ const theme = createTheme({
             default: '#161B33'
         }
     }, typography: {
-        fontFamily: 'Kanit',
+        fontFamily: 'Helvetica',
 
     }, breakpoints: {
         values: {
