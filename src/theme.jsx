@@ -14,7 +14,7 @@ const theme = createTheme({
         }
     }, typography: {
         fontFamily: 'Helvetica',
-        
+
     }, breakpoints: {
         values: {
             xs: 0,
