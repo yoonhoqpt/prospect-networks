@@ -21,7 +21,7 @@ function home() {
             </Typography>  
             <Box sx={{mt: 2}}>
 
-            <Link to='./dashboard'>
+            <Link to='./dashboard' style={{ textDecoration: 'none' }}>
                 <Button variant='contained' color='secondary' style={{maxWidth: '200px', maxHeight: '50px', minWidth: '200px', minHeight: '50px'}}>
                     <Typography fontSize={13} color='primary'>
                         <b>Get started</b>

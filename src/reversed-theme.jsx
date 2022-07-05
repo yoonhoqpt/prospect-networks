@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material";
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#161B33',
-        },
-        secondary: {
             main: '#F1DAC4',
         },
+        secondary: {
+            main: '#161B33',
+        },
         background: {
-            paper: '#161B33',
-            default: '#161B33'
+            paper: '#F1DAC4',
+            default: '#F1DAC4'
         }
     }, typography: {
         fontFamily: 'Helvetica',
@@ -18,9 +18,9 @@ const theme = createTheme({
     }, breakpoints: {
         values: {
             xs: 0,
-            sm: 90000, 
+            sm: 600, 
             md: 900,
-            lg: 1290,
+            lg: 1200,
             xl: 1536,
         }
     }, 
