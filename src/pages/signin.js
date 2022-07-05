@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@emotion/react';
-import { Container } from '@mui/system';
-import { CssBaseline, Grid, FormControlLabel, Box, Link, Paper, Avatar, Typography, Checkbox, Button } from '@mui/material';
-import Layout from '../components/Layout';
+import { CssBaseline, Grid, FormControlLabel, Box, Paper, Avatar, Typography, Checkbox, Button } from '@mui/material';
+import {Link} from 'react-router-dom';
 import theme from '../reversed-theme';
 import TextField from '@mui/material/TextField';
 import Image from '../components/images/login-ill.png';
@@ -84,14 +83,22 @@ function signin() {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2" color='secondary'>
-                    Forgot password?
-                  </Link>
+                <Link to={Location} style={{ textDecoration: 'none' }}>
+                    <Button>
+                        <Typography fontSize={13} color='secondary' noWrap>
+                            Forgot password?
+                        </Typography>
+                    </Button>
+                </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
+                  <Link to={'../register'} style={{ textDecoration: 'none' }}>
+                    <Button>
+                        <Typography fontSize={13} color='secondary' noWrap>
+                            Don't have an account? 
+                        </Typography>
+                    </Button>
+                </Link>
                 </Grid>
               </Grid>              
             </Box>

@@ -6,6 +6,7 @@ import About from "./pages/about";
 import FAQ from "./pages/faqs";
 import Contact from "./pages/contact";
 import Signin from "./pages/signin";
+import Register from "./pages/register";
 
 
 /** APP.JS:
@@ -25,6 +26,7 @@ function App() {
         <Route path='/faqs' element={<FAQ />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/signin' element={<Signin />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
     </BrowserRouter>
   )

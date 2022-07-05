@@ -18,13 +18,13 @@ class Header extends Component {
                         <img src={whitelogo} height={50}/>
                     </Link>   
                     </Grid>  
-                    <Grid item>
+                    <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         {this.AppBarItem("ABOUT", "../about")}
                         {this.AppBarItem("FAQs","../faqs")}
                         {this.AppBarItem("CONTACT", "../contact")}
                         {this.AppBarItem("EMPLOYERS", "../employer")}     
                         </Grid>                                          
-                        <Grid item>
+                        <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         <Link to={"../signin"} style={{ textDecoration: 'none' }}>
                             <Button variant='outlined' color='secondary'>
                                 <Typography fontSize={13} color='secondary'>
