@@ -1,17 +1,18 @@
 import { ReactDOM } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/landing";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./dashboard/dashboard";
 import About from "./pages/about";
 import FAQ from "./pages/faqs";
 import Contact from "./pages/contact";
+import Signin from "./pages/signin";
 
 
 /** APP.JS:
  *  Used to determine where myprospect.io/PATH leads to
  *  Reference for all links relevant to myprospect.io
  * ROUTING:
- *  To Route to seperate page, wrap component in <Link to={PATH}> <Link />
+ *  To Route to seperate page, wrap component in <Link to={PATH} style={{ textDecoration: 'none' }}> <Link />
  *  with PATH corresponding to the strings shown below. 
  */
 function App() {
@@ -19,10 +20,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
-        <Route path ='./dashboard' element={<Dashboard />} />
+        <Route path ='/dashboard' element={<Dashboard />} />
         <Route path='/about' element={<About />} />
         <Route path='/faqs' element={<FAQ />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/signin' element={<Signin />} />
       </Routes>
     </BrowserRouter>
   )

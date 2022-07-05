@@ -25,11 +25,13 @@ class Header extends Component {
                         {this.AppBarItem("EMPLOYERS", "../employer")}     
                         </Grid>                                          
                         <Grid item>
+                        <Link to={"../signin"} style={{ textDecoration: 'none' }}>
                             <Button variant='outlined' color='secondary'>
                                 <Typography fontSize={13} color='secondary'>
                                     Log in
                                 </Typography>
                             </ Button>
+                        </ Link>
                         </Grid>
                     </Grid>
                 </Toolbar>
@@ -46,7 +48,7 @@ class Header extends Component {
       */
     AppBarItem(DisplayName, Location) {
         return (
-                <Link to={Location}>
+                <Link to={Location} style={{ textDecoration: 'none' }}>
                     <Button>
                         <Typography fontSize={13} color='secondary' noWrap>
                             {DisplayName}
