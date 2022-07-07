@@ -7,6 +7,7 @@ import theme from '../theme.jsx';
 //FIXME: RECURSIVE <Link to=> behavior solved by ../PATH
 class Header extends Component {
     render() {
+        const user = null;
         return (
         <ThemeProvider theme={theme}>  
         <Box sx={{mt: 2}}> 
@@ -17,14 +18,25 @@ class Header extends Component {
                     <Link to="../">
                         <img src={whitelogo} height={50}/>
                     </Link>   
-                    </Grid>  
+                    </Grid>                      
                     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         {this.AppBarItem("ABOUT", "../about")}
                         {this.AppBarItem("FAQs","../faqs")}
                         {this.AppBarItem("CONTACT", "../contact")}
                         {this.AppBarItem("EMPLOYERS", "../employer")}     
-                        </Grid>                                          
-                        <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+                    </Grid>      
+                    {user ? (                        
+                             <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+                        <Link to={"../signin"} style={{ textDecoration: 'none' }}>
+                            <Button variant='outlined' color='secondary'>
+                                <Typography fontSize={13} color='secondary'>
+                                    Log out
+                                </Typography>
+                            </ Button>
+                        </ Link>
+                    </Grid>                        
+                    ) : (                        
+                             <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         <Link to={"../signin"} style={{ textDecoration: 'none' }}>
                             <Button variant='outlined' color='secondary'>
                                 <Typography fontSize={13} color='secondary'>
@@ -32,7 +44,9 @@ class Header extends Component {
                                 </Typography>
                             </ Button>
                         </ Link>
-                        </Grid>
+                    </Grid>                        
+                    )}                                    
+                   
                     </Grid>
                 </Toolbar>
             </AppBar>     
