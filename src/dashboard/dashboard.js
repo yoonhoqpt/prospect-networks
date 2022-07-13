@@ -14,7 +14,7 @@ function dashboard() {
           <div className="dashboard">
             <Layout>
               <h1>
-                Indeed, Jacob hath swindled his brother Esau.
+                Indeed, Jacob hath swindled his brother Esau. haha.
               </h1>
             </Layout>        
           </div>

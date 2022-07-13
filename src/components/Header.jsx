@@ -1,12 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import {Link} from 'react-router-dom';
 import {Toolbar, AppBar, Grid, Typography, Button, ThemeProvider, Box} from '@mui/material';
 import whitelogo from './images/whitelogo.png';
 import theme from '../theme.jsx';
+import {AuthContext} from '../context/authContext';
 
 //FIXME: RECURSIVE <Link to=> behavior solved by ../PATH
-class Header extends Component {
-    render() {
+export default function Header() {
+    
+        const context = useContext(AuthContext);        
         return (
         <ThemeProvider theme={theme}>  
         <Box sx={{mt: 2}}> 
@@ -19,10 +21,35 @@ class Header extends Component {
                     </Link>   
                     </Grid>  
                     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
-                        {this.AppBarItem("ABOUT", "../about")}
-                        {this.AppBarItem("FAQs","../faqs")}
-                        {this.AppBarItem("CONTACT", "../contact")}
-                        {this.AppBarItem("EMPLOYERS", "../employer")}     
+                    <Link to={"../about"} style={{ textDecoration: 'none' }}>
+                        <Button>
+                            <Typography fontSize={13} color='secondary' noWrap>
+                                {"ABOUT"}
+                            </Typography>
+                        </Button>
+                    </Link>
+                    <Link to={"../faqs"} style={{ textDecoration: 'none' }}>
+                        <Button>
+                            <Typography fontSize={13} color='secondary' noWrap>
+                                {"FAQs"}
+                            </Typography>
+                        </Button>
+                    </Link>
+                    <Link to={"../contact"} style={{ textDecoration: 'none' }}>
+                        <Button>
+                            <Typography fontSize={13} color='secondary' noWrap>
+                                {"CONTACT"}
+                            </Typography>
+                        </Button>
+                    </Link>
+                    <Link to={"../employer"} style={{ textDecoration: 'none' }}>
+                        <Button>
+                            <Typography fontSize={13} color='secondary' noWrap>
+                                {"EMPLOYERS"}
+                            </Typography>
+                        </Button>
+                    </Link>
+                       
                         </Grid>                                          
                         <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         <Link to={"../signin"} style={{ textDecoration: 'none' }}>
@@ -38,28 +65,5 @@ class Header extends Component {
             </AppBar>     
         </Box>
         </ThemeProvider>
-        )
-    }
-
-    /** Returns a clickable link on the AppBar.
-     * @param DisplayName name of the link. 
-     * @param Location directory location of the page.
-     * @returns the entire sub-component.
-      */
-    AppBarItem(DisplayName, Location) {
-        return (
-                <Link to={Location} style={{ textDecoration: 'none' }}>
-                    <Button>
-                        <Typography fontSize={13} color='secondary' noWrap>
-                            {DisplayName}
-                        </Typography>
-                    </Button>
-                </Link>
-                
-            
-        )
-    }
-    
+        )   
 }
-
-export default Header;
