@@ -8,7 +8,7 @@ import Contact from "./pages/contact";
 import Signin from "./pages/signin";
 import Register from "./pages/register";
 
-
+// connects to index.js
 /** APP.JS:
  *  Used to determine where myprospect.io/PATH leads to
  *  Reference for all links relevant to myprospect.io
