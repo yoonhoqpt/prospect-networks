@@ -6,7 +6,7 @@ const httpLink = createHttpLink ({
     uri: "https://xy3ojstr30.execute-api.us-west-2.amazonaws.com/beta/"
 });
 
-const authLink = setContext((_, { header }) => {
+const authLink = setContext((_, { headers }) => {
     return {
         headers: {
             ...headers,
