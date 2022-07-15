@@ -60,7 +60,7 @@ export default function Header() {
                         <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                             { user ? 
                                 <>
-                                    <Button variant='outlined' color='secondary'>
+                                    <Button variant='outlined' color='secondary' onClick={onLogout}>
                                         <Typography fontSize={13} color='secondary'>
                                             Logout
                                         </Typography>
