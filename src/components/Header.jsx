@@ -1,5 +1,5 @@
 import React, { Component, useContext } from "react";
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import {Toolbar, AppBar, Grid, Typography, Button, ThemeProvider, Box} from '@mui/material';
 import whitelogo from './images/whitelogo.png';
 import theme from '../theme.jsx';
@@ -7,8 +7,14 @@ import {AuthContext} from '../context/authContext';
 
 //FIXME: RECURSIVE <Link to=> behavior solved by ../PATH
 export default function Header() {
-    
-        const context = useContext(AuthContext);        
+        let navigate = useNavigate();
+        const {user, logout} = useContext(AuthContext);        
+
+        const onLogout = () => {
+            logout();
+            navigate('/');
+        }
+        console.log(user);
         return (
         <ThemeProvider theme={theme}>  
         <Box sx={{mt: 2}}> 
@@ -52,13 +58,25 @@ export default function Header() {
                        
                         </Grid>                                          
                         <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
-                        <Link to={"../signin"} style={{ textDecoration: 'none' }}>
-                            <Button variant='outlined' color='secondary'>
-                                <Typography fontSize={13} color='secondary'>
-                                    Log in
-                                </Typography>
-                            </ Button>
-                        </ Link>
+                            { user ? 
+                                <>
+                                    <Button variant='outlined' color='secondary'>
+                                        <Typography fontSize={13} color='secondary'>
+                                            Logout
+                                        </Typography>
+                                    </ Button>
+                                </>
+                            :
+                                <>
+                                    <Link to={"../signin"} style={{ textDecoration: 'none' }}>
+                                        <Button variant='outlined' color='secondary'>
+                                            <Typography fontSize={13} color='secondary'>
+                                                Log in
+                                            </Typography>
+                                        </ Button>
+                                    </ Link>
+                                </>
+                            }                            
                         </Grid>
                     </Grid>
                 </Toolbar>

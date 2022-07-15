@@ -1,19 +1,16 @@
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 // @mui
-import { styled } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
-import { Link, Grid, FormControlLabel, Paper, Checkbox, Container, Typography, CssBaseline, TextField, Stack, Alert, Button, Box } from '@mui/material';
+import { Link, Grid, FormControlLabel, Paper, Checkbox, Typography, CssBaseline, TextField, Button, Box } from '@mui/material';
 
 // auth stuff
 import {AuthContext} from '../context/authContext';
 import {useForm} from '../components/hooks';
 import { useMutation } from '@apollo/react-hooks';
 import { gql } from 'graphql-tag';
-import * as Yup from 'yup';
 
 // sections
-import AuthSocial from '../auth/AuthSocial';
 import theme from '../reversed-theme';
 import Image from '../components/images/login-ill.png';
 import logo from '../components/images/blacklogo.png';
@@ -21,7 +18,7 @@ import logo from '../components/images/blacklogo.png';
 // ----------------------------------------------------------------------
 
 const LOGIN_USER = gql ` 
-  mutation login(
+  mutation LoginUser(
     $loginInput: LoginInput
   ) {
     loginUser(
@@ -37,7 +34,7 @@ const LOGIN_USER = gql `
 `
 // ----------------------------------------------------------------------
 
-export default function Register() {
+export default function Login() {
   const context = useContext(AuthContext);
   let navigate = useNavigate();
   const [errors, setErrors] = useState([]);
@@ -45,6 +42,7 @@ export default function Register() {
   function loginUserCallback() {
     loginUser();
   }
+  
   const {onChange, onSubmit, values} = useForm(loginUserCallback, {    
     email: '',
     password: '',
@@ -127,6 +125,7 @@ export default function Register() {
           <Button
             color='secondary'
             type="submit"
+            onClick={onSubmit}
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
