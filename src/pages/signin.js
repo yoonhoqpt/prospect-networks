@@ -14,6 +14,7 @@ import { gql } from 'graphql-tag';
 import theme from '../reversed-theme';
 import Image from '../components/images/login-ill.png';
 import logo from '../components/images/blacklogo.png';
+import AuthSocial from '../auth/AuthSocial';
 
 // ----------------------------------------------------------------------
 
@@ -67,7 +68,7 @@ export default function Login(props) {
         item
         xs={false}
         sm={4}
-        md={7}
+        md={8}
         sx={{
           backgroundImage: `url(${Image})`,
           backgroundRepeat: 'no-repeat',
@@ -77,7 +78,7 @@ export default function Login(props) {
           backgroundPosition: 'center',
         }}
       />          
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid item xs={12} sm={8} md={4} component={Paper} elevation={6} square>
         <Box 
           sx={{
             my: 8,
@@ -93,7 +94,7 @@ export default function Login(props) {
           </Typography>
 
             <Typography sx={{ color: 'secondary', mb: 5 }}>Find the perfect job, stress-free.</Typography>
-            
+            <AuthSocial/>
             <Box component="form" noValidate sx={{ mt: 1 }}>            
               <TextField
                 color='secondary'

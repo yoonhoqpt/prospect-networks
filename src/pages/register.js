@@ -1,5 +1,5 @@
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 // @mui
 import { styled } from '@mui/material/styles';
 import { ThemeProvider } from '@emotion/react';
@@ -17,11 +17,12 @@ import AuthSocial from '../auth/AuthSocial';
 import thetheme from '../reversed-theme';
 
 import logo from '../components/images/blacklogo.png';
+import jwt_decode from 'jwt-decode';
 
 // ----------------------------------------------------------------------
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  maxWidth: 480,
+  maxWidth: 350,
   margin: 'auto',
   minHeight: '100vh',
   display: 'flex',
@@ -80,14 +81,28 @@ export default function Register() {
     lastName: Yup.string().required('Last name required'),
     email: Yup.string().email('Email must be a valid email address').required('Email is required'),
     password: Yup.string().required('Password is required'),
-  });
-  const defaultValues = {
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-  };
+  });  
 
+  // google SSO
+
+  function handleCallbackResponse(response) {
+    console.log("Encoded JWT ID token: " + response.credential);    
+    var userObject = jwt_decode(response.credential);
+    console.log(userObject);    
+  }
+  useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: "1061673576512-gnkunvdghpaqjjqc0ej5vj6lvoihdi52.apps.googleusercontent.com",
+      callback: handleCallbackResponse
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById("signInDiv"),
+      {theme: "filled_blue", size: "large", width: "350", text: "signup_with"}
+    );
+  }, []);
+  
   return (    
     <ThemeProvider theme={thetheme}>
       <CssBaseline />
@@ -102,7 +117,7 @@ export default function Register() {
 
             <AuthSocial />
             <Stack spacing={2}> 
-              <Stack spacing={2} direction={{xs: 'column', sm: 'row'}}>
+              <Stack spacing={2} direction={{xs: 'column', sm: 'row'}}>                
                 <TextField  
                   fullWidth 
                   color="secondary"
