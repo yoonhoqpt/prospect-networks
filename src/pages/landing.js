@@ -15,8 +15,13 @@ function home() {
       <CssBaseline /> 
       <div className="App">
         <Layout>
-          <Box sx={{mt: 15}}> 
-            <Typography color='secondary' variant='h1'>
+          <Box> 
+            <Box  sx={{mt: 15, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}></Box>
+            <Box  sx={{mt: 10, display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}></Box>
+            <Typography color='secondary' variant='h1' sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+            Finally, a job searching platform that empowers you.
+            </Typography>  
+            <Typography color='secondary' variant='h2' sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
             Finally, a job searching platform that empowers you.
             </Typography>  
             <Box sx={{mt: 2}}>
@@ -33,10 +38,13 @@ function home() {
           </Box>          
           <Box sx={{mt: 20, justifyContent: 'flex-start'}}>          
             <Grid container direction='row' justifyContent='space-between' alignItems='center'>
-            <Grid item xs={6}>
-              <img src={illustration} height={600}/>
+            <Grid item xs={12} sm={4} md={8} sx={{pl: 10, pr: 0, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+              <img src={illustration} height={600} style={{width:'100%',height:'auto'}}/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} md={8} sx={{display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
+              <img src={illustration} height={600} style={{width:'100%',height:'auto'}}/>
+            </Grid>
+            <Grid item xs={12} sm={8} md={4}>
               <Box sx={{mb: 10}}>
               <Typography color='secondary' fontSize='30px'>Every. Single. Job.</Typography>
               <Typography color='secondary' fontSize='40px'><b>Has a posted salary.</b></Typography>
@@ -49,7 +57,13 @@ function home() {
           </Box>
           <Box sx={{mt: 15}}>
             <Grid container direction='row' justifyContent='space-between' alignItems='center'>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} md={8} sx={{pl: 10, pr: 20, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+              <img src={interview} height={500} style={{width:'100%',height:'auto'}}/>
+            </Grid>
+            <Grid item xs={12} sm={4} md={8} sx={{display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
+              <img src={interview} height={500} style={{width:'100%',height:'auto'}}/>
+            </Grid>
+            <Grid item xs={12} sm={8} md={4}>
               <Box sx={{mb: 10}}>
               <Typography color='secondary' fontSize='30px'>A transparent</Typography>
               <Typography color='secondary' fontSize='40px'><b>interview process.</b></Typography>
@@ -58,17 +72,18 @@ function home() {
               rounds of interviews you must go through before you apply. Prepare better for your initial screening, technical 
               interview, and cognitive tests. </Typography>
             </Grid>
-            <Grid item xs={6}>
-              <img src={interview} height={500}/>
-            </Grid>
+            
             </Grid>
           </Box>
           <Box sx={{mt: 20, mb: 20, justifyContent: 'flex-start'}}>          
             <Grid container direction='row' justifyContent='space-between' alignItems='center'>
-            <Grid item xs={6}>
-              <img src={ghost} height={600}/>
+            <Grid item xs={12} sm={4} md={8} sx={{pl: 10, pr: 20, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+              <img src={ghost} style={{width:'100%',height:'auto'}}/>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} sm={4} md={8} sx={{display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
+              <img src={ghost} style={{width:'100%',height:'auto'}}/>
+            </Grid>
+            <Grid item xs={12} sm={8} md={4}>
               <Box sx={{mb: 10}}>
               <Typography color='secondary' fontSize='30px'>Getting ghosted?</Typography>
               <Typography color='secondary' fontSize='40px'><b>Let's fix that.</b></Typography>

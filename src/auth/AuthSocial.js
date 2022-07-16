@@ -32,7 +32,7 @@ export default function AuthSocial() {
 
     google.accounts.id.renderButton(
       document.getElementById("signInDiv"),
-      {theme: "filled_blue", size: "large", width: "350", text: "signup_with"}
+      {theme: "filled_blue", size: "large", width: "350", text: "continue_with"}
     );
   }, []);
   return (

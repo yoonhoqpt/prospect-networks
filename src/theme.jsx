@@ -12,8 +12,9 @@ const theme = createTheme({
             paper: '#161B33',
             default: '#161B33'
         }
-    }, typography: {
-        fontFamily: 'Helvetica',
+    }, 
+    typography: {
+        fontFamily: 'Helvetica'        
 
     }, breakpoints: {
         values: {
@@ -24,7 +25,18 @@ const theme = createTheme({
             xl: 1536,
         }
     }, 
-
+    components: {
+        // Name of the component
+        MuiListItemText: {
+          styleOverrides: {
+            // Name of the slot
+            root: {
+              // Some CSS
+              color: '#F1DAC4',
+            },
+          },
+        },
+      },
 });
 
 export default theme;

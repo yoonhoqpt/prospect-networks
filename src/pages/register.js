@@ -83,25 +83,7 @@ export default function Register() {
     password: Yup.string().required('Password is required'),
   });  
 
-  // google SSO
-
-  function handleCallbackResponse(response) {
-    console.log("Encoded JWT ID token: " + response.credential);    
-    var userObject = jwt_decode(response.credential);
-    console.log(userObject);    
-  }
-  useEffect(() => {
-    /* global google */
-    google.accounts.id.initialize({
-      client_id: "1061673576512-gnkunvdghpaqjjqc0ej5vj6lvoihdi52.apps.googleusercontent.com",
-      callback: handleCallbackResponse
-    });
-
-    google.accounts.id.renderButton(
-      document.getElementById("signInDiv"),
-      {theme: "filled_blue", size: "large", width: "350", text: "signup_with"}
-    );
-  }, []);
+  <AuthSocial/>
   
   return (    
     <ThemeProvider theme={thetheme}>
