@@ -36,7 +36,9 @@ function home() {
             
             </Box>
           </Box>          
-          <Box sx={{mt: 20, justifyContent: 'flex-start'}}>          
+          <Box  sx={{mt: 20, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}></Box>
+          <Box  sx={{mt: 5, display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}></Box>
+          <Box sx={{ justifyContent: 'flex-start'}}>          
             <Grid container direction='row' justifyContent='space-between' alignItems='center'>
             <Grid item xs={12} sm={4} md={8} sx={{pl: 10, pr: 0, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
               <img src={illustration} height={600} style={{width:'100%',height:'auto'}}/>
