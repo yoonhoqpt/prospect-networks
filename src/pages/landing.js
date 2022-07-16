@@ -36,7 +36,7 @@ function home() {
             
             </Box>
           </Box>          
-          <Box  sx={{mt: 20, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}></Box>
+          <Box  sx={{mt: 10, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}></Box>
           <Box  sx={{mt: 5, display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}></Box>
           <Box sx={{ justifyContent: 'flex-start'}}>          
             <Grid container direction='row' justifyContent='space-between' alignItems='center'>
