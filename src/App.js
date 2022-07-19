@@ -7,6 +7,7 @@ import FAQ from "./pages/faqs";
 import Contact from "./pages/contact";
 import Signin from "./pages/signin";
 import Register from "./pages/register";
+import Employer from './employer';
 
 
 /** APP.JS:
@@ -27,6 +28,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/employer' element={<Employer />} />
       </Routes>
     </BrowserRouter>
   )
