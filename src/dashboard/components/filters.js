@@ -20,18 +20,7 @@ export default function filters(){
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Internship" />
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Contract" />
                     </FormGroup>
-                </Grid>
-                <Grid item>
-                    <Typography color='secondary'>Location</Typography>
-                    <TextField 
-                        color='neutral'                          
-                        fullWidth
-                        id="search"
-                        label="Search"
-                        name="search"                    
-                        focused  
-                    />
-                </Grid>
+                </Grid>            
                 <Grid item>
                     <Typography color='secondary'>Salary</Typography>
                     <FormGroup>

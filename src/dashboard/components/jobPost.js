@@ -13,20 +13,7 @@ export default function jobPost(){
     return (        
         <ThemeProvider theme={lightTheme}>        
         <Box>
-            <Grid container direction="horizontal" justifyContent="space-between" alignItems="flex-start">
-                <Grid item xs={12}>
-                    <TextField
-                        color='secondary'                          
-                        fullWidth
-                        id="search"
-                        label="Search"
-                        name="search"                    
-                        focused                        
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <Button color='secondary' fullWidth variant='contained'><Typography color='primary'>Search</Typography></Button>
-                </Grid>
+            <Grid container direction="horizontal" justifyContent="space-between" alignItems="flex-start">            
                 <Grid item>
                     <Card style={cardStyle}>
                         <CardContent>

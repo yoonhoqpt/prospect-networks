@@ -8,6 +8,7 @@ import JobDescription from './components/jobDescription';
 import lightTheme from '../lightTheme';
 import Navbar from './components/navbar';
 import React from 'react';
+import Searchbar from './components/search';
 
 function dashboard() {
   return(
@@ -18,6 +19,9 @@ function dashboard() {
           <Grid container>
             <Grid item xs={12}>
               <Box sx={{mt:5}} />
+            </Grid>
+            <Grid item xs={12}>
+              <Searchbar />
             </Grid>
             <Grid item sm={0} md={3} lg={3} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
               <Filters/>
