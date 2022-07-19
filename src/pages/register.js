@@ -67,7 +67,7 @@ export default function Register() {
   const [ registerUser, { loading}] = useMutation(REGISTER_USER, {
     update(proxy, {data: {registerUser: userData}}) {
       context.login(userData);
-      navigate('/');
+      navigate('/dashboard');
     }, 
     onError({graphQLErrors}) {
       setErrors(graphQLErrors);
