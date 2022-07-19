@@ -18,15 +18,18 @@ function dashboard() {
           <Navbar/>
           <Grid container>
             <Grid item xs={12}>
-              <Box sx={{mt:5}} />
+              <Box sx={{mt:3}} />
             </Grid>
             <Grid item xs={12}>
               <Searchbar />
             </Grid>
-            <Grid item sm={0} md={3} lg={3} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+            <Grid item xs={12}>
+              <Box sx={{mt:3}} />
+            </Grid>
+            <Grid item sm={0} md={3} lg={2} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
               <Filters/>
             </Grid>
-            <Grid item xs={12} sm={8} md={6} lg={6}>
+            <Grid item xs={12} sm={8} md={6} lg={7}>
               <JobPost/>
             </Grid>
             <Grid item sm={0} md={3} lg={3} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>

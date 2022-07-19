@@ -5,7 +5,6 @@ import { ThemeProvider } from '@emotion/react';
 export default function jobPost(){
     var cardStyle = {
         display: 'block',
-        width: '37vw',
         transitionDuration: '0.3s',
         height: '5vw',
         elevation: '0'
@@ -13,146 +12,154 @@ export default function jobPost(){
     return (        
         <ThemeProvider theme={lightTheme}>        
         <Box>
-            <Grid container direction="horizontal" justifyContent="space-between" alignItems="flex-start">            
+            <Grid container direction="column" justifyContent="flex-start" alignItems="stretch">            
                 <Grid item>
-                    <Card style={cardStyle}>
-                        <CardContent>
-                            <Grid container justifyContent='space-between' direction='row'>
-                                <Grid item>
-                                    <Avatar></Avatar>
+                    <Box sx={{mb: 2}}>
+                        <Card style={cardStyle}>
+                            <CardContent>
+                                <Grid container justifyContent='space-between' direction='row'>
+                                    <Grid item>
+                                        <Avatar></Avatar>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        Job title
+                                        </Typography>
+                                        <Typography variant="h5" component="div">
+                                        Company name
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Location
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        Remote avail                                                        
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Salary
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        benefits                                                    
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
-                                <Grid item>
-                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
-                                    Job title
-                                    </Typography>
-                                    <Typography variant="h5" component="div">
-                                    Company name
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Location
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    Remote avail                                                        
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Salary
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    benefits                                                    
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
+                    </Box>
                 </Grid>
                 <Grid item>
-                <Card style={cardStyle}>
-                        <CardContent>
-                            <Grid container justifyContent='space-between' direction='row'>
-                                <Grid item>
-                                    <Avatar></Avatar>
+                    <Box sx={{mb: 2}}>
+                        <Card style={cardStyle}>
+                            <CardContent>
+                                <Grid container justifyContent='space-between' direction='row'>
+                                    <Grid item>
+                                        <Avatar></Avatar>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        Job title
+                                        </Typography>
+                                        <Typography variant="h5" component="div">
+                                        Company name
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Location
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        Remote avail                                                        
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Salary
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        benefits                                                    
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
-                                <Grid item>
-                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
-                                    Job title
-                                    </Typography>
-                                    <Typography variant="h5" component="div">
-                                    Company name
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Location
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    Remote avail                                                        
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Salary
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    benefits                                                    
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
+                    </Box>
                 </Grid>
                 <Grid item>
-                <Card style={cardStyle}>
-                        <CardContent>
-                            <Grid container justifyContent='space-between' direction='row'>
-                                <Grid item>
-                                    <Avatar></Avatar>
+                    <Box sx={{mb: 2}}>
+                        <Card style={cardStyle}>
+                            <CardContent>
+                                <Grid container justifyContent='space-between' direction='row'>
+                                    <Grid item>
+                                        <Avatar></Avatar>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        Job title
+                                        </Typography>
+                                        <Typography variant="h5" component="div">
+                                        Company name
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Location
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        Remote avail                                                        
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Salary
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        benefits                                                    
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
-                                <Grid item>
-                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
-                                    Job title
-                                    </Typography>
-                                    <Typography variant="h5" component="div">
-                                    Company name
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Location
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    Remote avail                                                        
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Salary
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    benefits                                                    
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
+                    </Box>
                 </Grid>
                 <Grid item>
-                <Card style={cardStyle}>
-                        <CardContent>
-                            <Grid container justifyContent='space-between' direction='row'>
-                                <Grid item>
-                                    <Avatar></Avatar>
+                    <Box sx={{mb: 2}}>
+                        <Card style={cardStyle}>
+                            <CardContent>
+                                <Grid container justifyContent='space-between' direction='row'>
+                                    <Grid item>
+                                        <Avatar></Avatar>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        Job title
+                                        </Typography>
+                                        <Typography variant="h5" component="div">
+                                        Company name
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Location
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        Remote avail                                                        
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                                        Salary
+                                        </Typography>
+                                        <Typography variant="body2">
+                                        benefits                                                    
+                                        </Typography>
+                                    </Grid>
                                 </Grid>
-                                <Grid item>
-                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
-                                    Job title
-                                    </Typography>
-                                    <Typography variant="h5" component="div">
-                                    Company name
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Location
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    Remote avail                                                        
-                                    </Typography>
-                                </Grid>
-                                <Grid item>
-                                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                                    Salary
-                                    </Typography>
-                                    <Typography variant="body2">
-                                    benefits                                                    
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </CardContent>
-                    </Card>
+                            </CardContent>
+                        </Card>
+                    </Box>
                 </Grid>
             </Grid>
         </Box>

@@ -1,14 +1,14 @@
 import React, { Component, useContext, useState } from "react";
 import {Link, useNavigate} from 'react-router-dom';
 import {Toolbar, AppBar, Grid, TextField, Drawer, ListItem, ListItemText, List, Typography, Avatar, Button, ThemeProvider, Box, Menu, MenuItem} from '@mui/material';
-import whitelogo from '../../components/images/whitelogo.png';
-import blacklogo from '../../components/images/blacklogo.png';
-import search from '../../components/images/search.png';
-import theme from '../../theme.jsx';
-import lightTheme from '../../lightTheme';
-import hamburger from '../../components/images/menuBlack.png';
-import {AuthContext} from '../../context/authContext';
-import notification from '../../components/images/bell.png';
+import whitelogo from '../../../components/images/whitelogo.png';
+import blacklogo from '../../../components/images/blacklogo.png';
+import search from '../../../components/images/search.png';
+import theme from '../../../theme.jsx';
+import lightTheme from '../../../lightTheme';
+import hamburger from '../../../components/images/menuBlack.png';
+import {AuthContext} from '../../../context/authContext';
+import notification from '../../../components/images/bell.png';
 
 //FIXME: RECURSIVE <Link to=> behavior solved by ../PATH
 export default function Navbar() {    
@@ -44,14 +44,14 @@ export default function Navbar() {
                     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         <Link to={"../dashboard"} style={{ textDecoration: 'none' }}>
                             <Button>
-                                <Typography color='#105FE1'>
+                                <Typography color='secondary'>
                                     <b>Search</b>
                                 </Typography>
                             </Button>
                         </Link>
                         <Link to={"../dashboard/favorites"} style={{ textDecoration: 'none' }}>
                             <Button>
-                                <Typography color='secondary'>
+                                <Typography color='#105FE1'>
                                 <b> Favorites</b>
                                 </Typography>
                             </Button>

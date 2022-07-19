@@ -11,19 +11,22 @@ export default function jobDescription(){
                     <Avatar></Avatar>
                 </Grid>
                 <Grid item>
-                    <Button><Typography color='secondary'>Company name</Typography></Button>
+                    <Typography color='secondary'>Company name</Typography>
                 </Grid>
                 <Grid item>
-                    <Button><Typography color='secondary'>Salary</Typography></Button>
+                    <Typography color='secondary'>Job title</Typography>
                 </Grid>
                 <Grid item>
-                    <Button><Typography color='secondary'>Date posted</Typography></Button>
+                    <Typography color='secondary'>Salary</Typography>
                 </Grid>
                 <Grid item>
-                    <Button><Typography color='secondary'>Experience level</Typography></Button>
+                    <Typography color='secondary'>Date posted</Typography>
                 </Grid>
                 <Grid item>
-                    <Button><Typography color='secondary'>Number of interviews</Typography></Button>
+                    <Typography color='secondary'>Experience level</Typography>
+                </Grid>
+                <Grid item>
+                    <Typography color='secondary'>Number of interviews</Typography>
                 </Grid>
             </Grid>
         </Box>

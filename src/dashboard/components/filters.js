@@ -20,25 +20,10 @@ export default function filters(){
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Internship" />
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Contract" />
                     </FormGroup>
-                </Grid>            
-                <Grid item>
-                    <Typography color='secondary'>Salary</Typography>
-                    <FormGroup>
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$0 - $24999" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$25000 - $49999" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$50000 - $74999" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$75000 - $99999" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$100000 - $124999" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$125000 - $149999" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$150000 - $200000" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="$200000 +" />
-                    </FormGroup>
-                </Grid>
+                </Grid>                            
                 <Grid item>
                     <Typography color='secondary'>Date posted</Typography>
-                    <FormGroup>
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Today" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Yesterday" />
+                    <FormGroup>                                          
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="3 days ago" />
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="1 week ago" />
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="1 month ago" />
@@ -48,20 +33,19 @@ export default function filters(){
                 <Grid item>
                     <Typography color='secondary'>Experience level</Typography>
                     <FormGroup>
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Entry level (0-1 years of exp)" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Junior (2-3 years of exp)" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Mid-senior (4-5 years of exp)" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Senior (6-7 years of exp)" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Director (8+ years of exp)" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Entry level" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Junior" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Mid-senior" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Senior" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="Director" />
                     </FormGroup>
                 </Grid>
                 <Grid item>
                     <Typography color='secondary'>Number of interviews</Typography>
                     <FormGroup>
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="0-1" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="2-3" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="4-5" />
-                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="6-9" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="0-3" />                        
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="4-6" />
+                        <FormControlLabel control={<BpCheckbox color='neutral'/>} label="7-9" />
                         <FormControlLabel control={<BpCheckbox color='neutral'/>} label="10+" />
                     </FormGroup>
                 </Grid>
