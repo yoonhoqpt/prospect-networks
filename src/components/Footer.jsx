@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BottomNavigation, Typography, ThemeProvider } from "@mui/material";
-import theme from '../theme';
+import theme from '../themeforfooter';
 
 /**LINKS: back to top, ... 
  * FIXMES: add Links

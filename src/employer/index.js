@@ -7,6 +7,7 @@ import theme from '../theme';
 import illustration from '../components/images/money.png';
 import interview from '../components/images/interview.png';
 import ghost from '../components/images/ghost.png'
+import Navbar from './navbar';
 
 function home() {
   return (
@@ -14,15 +15,15 @@ function home() {
     <ThemeProvider theme={theme}>
       <CssBaseline /> 
       <div className="App">
-        <Layout>
+        <Navbar />
           <Box> 
             <Box  sx={{mt: 15, display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}></Box>
             <Box  sx={{mt: 10, display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}></Box>
             <Typography color='secondary' variant='h1' sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
-            Finally, a job searching platform that empowers you.
+            Search the best pool of candidates, money effectively.
             </Typography>  
             <Typography color='secondary' variant='h2' sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
-            Finally, a job searching platform that empowers you.
+            Search the best pool of candidates, money effectively.
             </Typography>  
             <Box sx={{mt: 2}}>
 
@@ -95,8 +96,7 @@ function home() {
               from the employer regarding the initial screening process.</Typography>
             </Grid>
             </Grid>
-          </Box>
-        </Layout>        
+          </Box>        
       </div>
     </ThemeProvider>
     </Container>

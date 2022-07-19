@@ -53,7 +53,7 @@ export default function Login(props) {
   const [ loginUser, { loading}] = useMutation(LOGIN_USER, {
     update(proxy, {data: {loginUser: userData}}) {
       context.login(userData);
-      navigate('/');      
+      navigate('/dashboard');      
     }, 
     onError({graphQLErrors}) {
       setErrors(graphQLErrors);

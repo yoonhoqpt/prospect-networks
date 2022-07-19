@@ -7,6 +7,11 @@ import FAQ from "./pages/faqs";
 import Contact from "./pages/contact";
 import Signin from "./pages/signin";
 import Register from "./pages/register";
+import Employer from './employer';
+import Favorites from './dashboard/pages/favorites';
+import Applied from './dashboard/pages/applied';
+import Messages from './dashboard/pages/messages';
+import Profile from './dashboard/pages/profile';
 
 // connects to index.js
 /** APP.JS:
@@ -22,11 +27,16 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path ='/dashboard' element={<Dashboard />} />
+        <Route path ='/dashboard/favorites' element={<Favorites />} />
+        <Route path ='/dashboard/applied' element={<Applied />} />
+        <Route path ='/dashboard/profile' element={<Profile />} />
+        <Route path ='/dashboard/messages' element={<Messages />} />
         <Route path='/about' element={<About />} />
         <Route path='/faqs' element={<FAQ />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/signin' element={<Signin />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/employer' element={<Employer />} />
       </Routes>
     </BrowserRouter>
   )

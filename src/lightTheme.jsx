@@ -3,18 +3,26 @@ import { createTheme } from "@mui/material";
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#161B33',
+            main: '#ffffff',
         },
         secondary: {
-            main: '#F1DAC4',
+            main: '#575757',
+            // 3633FF
+        },
+        neutral: {
+          main: '#105FE1'
         },
         background: {
-            paper: '#F1DAC4',
-            default: '#161B33'
+            paper: '#ffffff',
+            default: '#ffffff'
         }
     }, 
     typography: {
-        fontFamily: 'Helvetica'        
+        fontFamily: 'system-ui',
+        fontSize: '1.9rem',
+        button: {
+            textTransform: "none"
+          }     
 
     }, breakpoints: {
         values: {
@@ -32,7 +40,7 @@ const theme = createTheme({
             // Name of the slot
             root: {
               // Some CSS
-              color: '#F1DAC4',
+              color: '#000000',
             },
           },
         },
