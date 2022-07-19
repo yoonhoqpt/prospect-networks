@@ -1,11 +1,12 @@
 import React, { Component, useContext, useState } from "react";
 import {Link, useNavigate} from 'react-router-dom';
-import {Toolbar, AppBar, Grid, TextField, Typography, Avatar, Button, ThemeProvider, Box, Menu, MenuItem} from '@mui/material';
+import {Toolbar, AppBar, Grid, TextField, Drawer, ListItem, ListItemText, List, Typography, Avatar, Button, ThemeProvider, Box, Menu, MenuItem} from '@mui/material';
 import whitelogo from '../../components/images/whitelogo.png';
 import blacklogo from '../../components/images/blacklogo.png';
 import search from '../../components/images/search.png';
 import theme from '../../theme.jsx';
 import lightTheme from '../../lightTheme';
+import hamburger from '../../components/images/menuBlack.png';
 import {AuthContext} from '../../context/authContext';
 import notification from '../../components/images/bell.png';
 
@@ -41,31 +42,41 @@ export default function Navbar() {
                     </Link>   
                     </Grid>  
                     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
-                        <Button>
-                            <Typography color='#105FE1'>
-                                <b>Search</b>
-                            </Typography>
-                        </Button>
-                        <Button>
-                            <Typography color='secondary'>
-                               <b> Favorites</b>
-                            </Typography>
-                        </Button>
-                        <Button>
-                            <Typography color='secondary'>
-                               <b> Applied jobs</b>
-                            </Typography>
-                        </Button>
-                        <Button>
-                            <Typography color='secondary'>
-                               <b> My profile</b>
-                            </Typography>
-                        </Button>
-                        <Button>
-                            <Typography color='secondary'>
-                               <b> Messages</b>
-                            </Typography>
-                        </Button>
+                        <Link to={"../dashboard"} style={{ textDecoration: 'none' }}>
+                            <Button>
+                                <Typography color='#105FE1'>
+                                    <b>Search</b>
+                                </Typography>
+                            </Button>
+                        </Link>
+                        <Link to={"../dashboard/favorites"} style={{ textDecoration: 'none' }}>
+                            <Button>
+                                <Typography color='secondary'>
+                                <b> Favorites</b>
+                                </Typography>
+                            </Button>
+                        </Link>
+                        <Link to={"../dashboard/applied"} style={{ textDecoration: 'none' }}>
+                            <Button>
+                                <Typography color='secondary'>
+                                <b> Applied jobs</b>
+                                </Typography>
+                            </Button>
+                        </Link>
+                        <Link to={"../profile"} style={{ textDecoration: 'none' }}>
+                            <Button>
+                                <Typography color='secondary'>
+                                <b> My profile</b>
+                                </Typography>
+                            </Button>
+                        </Link>
+                        <Link to={"../messages"} style={{ textDecoration: 'none' }}>
+                            <Button>
+                                <Typography color='secondary'>
+                                <b> Messages</b>
+                                </Typography>
+                            </Button>
+                        </Link>
                     </Grid>                                          
                     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         { user ? 
@@ -100,15 +111,67 @@ export default function Navbar() {
                         :
                             <>
                                 <Link to={"../signin"} style={{ textDecoration: 'none' }}>
-                                    <Button variant='outlined' color='secondary'>
-                                        <Typography fontSize={13} color='secondary'>
+                                    <Button variant='contained' color='neutral'>
+                                        <Typography fontSize={13} color='primary'>
                                             Log in
                                         </Typography>
                                     </ Button>
                                 </ Link>
                             </>
                         }                            
-                    </Grid>                    
+                    </Grid>   
+                    <Grid item sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
+                        <Button onClick={() => setIsDrawerOpen(true)}>
+                            <img src={hamburger} height='30'></img>
+                        </Button>
+                        <Drawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
+                            <List>
+                                 { user ? 
+                                    <>
+                                        <ListItem button onClick={onLogout}>
+                                        <ListItemText primary="LOGOUT" />
+                                        </ListItem>
+                                    </>
+                                :
+                                    <>
+                                        <Link to={"../signin"} style={{ textDecoration: 'none' }}>
+                                            <ListItem button>
+                                            <ListItemText primary="LOG IN" />
+                                            </ListItem>
+                                        </Link>
+                                    </>
+                                }
+                                <Link to={"../dashboard"} style={{ textDecoration: 'none' }}>
+                                    <ListItem button>
+                                    <ListItemText primary="Search" />
+                                    </ListItem>
+                                </Link>
+
+                                <Link to={"../dashboard/favorites"} style={{ textDecoration: 'none' }}>
+                                    <ListItem button>
+                                    <ListItemText primary="Favorites" />
+                                    </ListItem>
+                                </Link>
+
+                                <Link to={"../dashboard/applied"} style={{ textDecoration: 'none' }}>
+                                    <ListItem button>
+                                    <ListItemText primary="Applied jobs" />
+                                    </ListItem>
+                                </Link>
+
+                                <Link to={"../profile"} style={{ textDecoration: 'none' }}>
+                                    <ListItem button>
+                                    <ListItemText primary="My profile" />
+                                    </ListItem>                                
+                                </Link>
+                                <Link to={"../messages"} style={{ textDecoration: 'none' }}>
+                                    <ListItem button>
+                                    <ListItemText primary="Message" />
+                                    </ListItem>                                
+                                </Link>
+                            </List>
+                        </Drawer>
+                    </Grid>                 
                 </Grid>
             </Toolbar>
         </AppBar>     

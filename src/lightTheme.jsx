@@ -9,6 +9,9 @@ const theme = createTheme({
             main: '#575757',
             // 3633FF
         },
+        neutral: {
+          main: '#105FE1'
+        },
         background: {
             paper: '#ffffff',
             default: '#ffffff'
@@ -37,7 +40,7 @@ const theme = createTheme({
             // Name of the slot
             root: {
               // Some CSS
-              color: '#F1DAC4',
+              color: '#000000',
             },
           },
         },

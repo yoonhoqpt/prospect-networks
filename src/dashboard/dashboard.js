@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@emotion/react';
 import { Container } from '@mui/system';
-import { CssBaseline, Grid } from '@mui/material';
+import { CssBaseline, Grid, Box } from '@mui/material';
 import Layout from '../components/Layout';
 import Filters from './components/filters';
 import JobPost from './components/jobPost';
@@ -16,6 +16,9 @@ function dashboard() {
           <CssBaseline />            
           <Navbar/>
           <Grid container>
+            <Grid item xs={12}>
+              <Box sx={{mt:5}} />
+            </Grid>
             <Grid item sm={0} md={3} lg={3} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
               <Filters/>
             </Grid>
