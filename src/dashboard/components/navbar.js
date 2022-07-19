@@ -42,28 +42,28 @@ export default function Navbar() {
                     </Grid>  
                     <Grid item sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
                         <Button>
-                            <Typography color='secondary'>
-                                Search
+                            <Typography color='#105FE1'>
+                                <b>Search</b>
                             </Typography>
                         </Button>
                         <Button>
                             <Typography color='secondary'>
-                                Favorites
+                               <b> Favorites</b>
                             </Typography>
                         </Button>
                         <Button>
                             <Typography color='secondary'>
-                                Applied jobs
+                               <b> Applied jobs</b>
                             </Typography>
                         </Button>
                         <Button>
                             <Typography color='secondary'>
-                                My profile
+                               <b> My profile</b>
                             </Typography>
                         </Button>
                         <Button>
                             <Typography color='secondary'>
-                                Messages
+                               <b> Messages</b>
                             </Typography>
                         </Button>
                     </Grid>                                          

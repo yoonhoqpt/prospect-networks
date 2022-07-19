@@ -16,13 +16,13 @@ function dashboard() {
           <CssBaseline />            
           <Navbar/>
           <Grid container>
-            <Grid item xs={0} sm={0} md={3} lg={3}>
+            <Grid item sm={0} md={3} lg={3} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
               <Filters/>
             </Grid>
             <Grid item xs={12} sm={8} md={6} lg={6}>
               <JobPost/>
             </Grid>
-            <Grid item xs={0} sm={0} md={3} lg={3}>
+            <Grid item sm={0} md={3} lg={3} sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
               <JobDescription/>
             </Grid>
           </Grid>
