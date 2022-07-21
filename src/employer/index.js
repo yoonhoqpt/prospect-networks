@@ -3,7 +3,7 @@ import { Container, Typography, Box, Button, Grid } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import {Link} from 'react-router-dom';
-import theme from '../theme';
+import theme from '../components/theme/Dashboard';
 import illustration from '../components/images/money.png';
 import interview from '../components/images/interview.png';
 import ghost from '../components/images/ghost.png'

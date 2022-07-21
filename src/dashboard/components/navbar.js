@@ -4,8 +4,7 @@ import {Toolbar, AppBar, Grid, TextField, Drawer, ListItem, ListItemText, List, 
 import whitelogo from '../../components/images/whitelogo.png';
 import blacklogo from '../../components/images/blacklogo.png';
 import search from '../../components/images/search.png';
-import theme from '../../theme.jsx';
-import lightTheme from '../../lightTheme';
+import lightTheme from '../../components/theme/Dashboard';
 import hamburger from '../../components/images/menuBlack.png';
 import {AuthContext} from '../../context/authContext';
 import notification from '../../components/images/bell.png';

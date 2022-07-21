@@ -2,7 +2,7 @@ import React, { Component, useContext, useState } from "react";
 import {Link, useNavigate} from 'react-router-dom';
 import {Toolbar, AppBar, Grid, Typography, Drawer, Button, ThemeProvider, Box, List, ListItem, ListItemText} from '@mui/material';
 import whitelogo from './images/whitelogo.png';
-import theme from '../theme.jsx';
+import theme from '../components/theme/Landing';
 import {AuthContext} from '../context/authContext';
 import hamburger from './images/menu.png';
 

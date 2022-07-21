@@ -1,5 +1,5 @@
 import {Box, Button, Typography, Grid, Avatar} from '@mui/material';
-import lightTheme from '../../lightTheme';
+import lightTheme from '../../components/theme/Dashboard';
 import { ThemeProvider } from '@emotion/react';
 
 export default function jobDescription(){

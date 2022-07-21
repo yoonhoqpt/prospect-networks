@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Filters from './components/filters';
 import JobPost from './components/jobPost';
 import JobDescription from './components/jobDescription';
-import lightTheme from '../lightTheme';
+import lightTheme from '../components/theme/Dashboard';
 import Navbar from './components/navbar';
 import React from 'react';
 import Searchbar from './components/search';

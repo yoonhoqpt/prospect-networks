@@ -13,8 +13,8 @@ import { gql } from 'graphql-tag';
 import * as Yup from 'yup';
 
 // sections
-import AuthSocial from '../auth/AuthSocial';
-import thetheme from '../reversed-theme';
+import AuthSocial from '../components/AuthSocial';
+import thetheme from '../components/theme/loginRegister';
 
 import logo from '../components/images/blacklogo.png';
 import jwt_decode from 'jwt-decode';

@@ -1,6 +1,6 @@
 import {Box, Button, Typography, Grid, Checkbox, FormControlLabel, FormGroup, TextField } from '@mui/material';
 import blackLogo from '../../components/images/blacklogo.png';
-import lightTheme from '../../lightTheme';
+import lightTheme from '../../components/theme/Dashboard';
 import { ThemeProvider } from '@emotion/react';
 import BpCheckbox from './bpcheckbox';
 
