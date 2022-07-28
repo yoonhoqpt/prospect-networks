@@ -12,6 +12,8 @@ import Favorites from './dashboard/pages/favorites';
 import Applied from './dashboard/pages/applied';
 import Messages from './dashboard/pages/messages';
 import Profile from './dashboard/pages/profile';
+import EmployerLogin from './employer/pages/login';
+import EmployerRegister from './employer/pages/register';
 
 // connects to index.js
 /** APP.JS:
@@ -37,6 +39,8 @@ function App() {
         <Route path='/signin' element={<Signin />} />
         <Route path='/register' element={<Register />} />
         <Route path='/employer' element={<Employer />} />
+        <Route path='/employer/login' element={<EmployerLogin />} />
+        <Route path='/employer/register' element={<EmployerRegister />} />
       </Routes>
     </BrowserRouter>
   )
