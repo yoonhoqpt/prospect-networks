@@ -2,7 +2,7 @@ import { ThemeProvider } from '@emotion/react';
 import { Container } from '@mui/system';
 import { CssBaseline } from '@mui/material';
 import Layout from '../components/Layout';
-import theme from '../theme';
+import theme from '../components/theme/Landing';
 
 import React from 'react';
 

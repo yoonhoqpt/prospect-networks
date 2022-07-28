@@ -11,10 +11,10 @@ import { useMutation } from '@apollo/react-hooks';
 import { gql } from 'graphql-tag';
 
 // sections
-import theme from '../reversed-theme';
+import theme from '../components/theme/loginRegister';
 import Image from '../components/images/login-ill.png';
 import logo from '../components/images/blacklogo.png';
-import AuthSocial from '../auth/AuthSocial';
+import AuthSocial from '../components/AuthSocial';
 
 // ----------------------------------------------------------------------
 
