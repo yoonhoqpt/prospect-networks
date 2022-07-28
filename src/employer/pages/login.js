@@ -5,16 +5,15 @@ import { ThemeProvider } from '@emotion/react';
 import { Link, Grid, FormControlLabel, Paper, Checkbox, Container, Typography, Stack, Alert, CssBaseline, TextField, Button, Box } from '@mui/material';
 
 // auth stuff
-import {AuthContext} from '../context/authContext';
-import {useForm} from '../components/hooks';
+import {AuthContext} from '../../context/authContext';
+import {useForm} from '../../components/hooks';
 import { useMutation } from '@apollo/react-hooks';
 import { gql } from 'graphql-tag';
 
 // sections
-import theme from '../components/theme/loginRegister';
-import Image from '../components/images/login-ill.png';
-import logo from '../components/images/blacklogo.png';
-import AuthSocial from '../components/AuthSocial';
+import theme from '../../components/theme/loginRegister';
+import Image from '../../components/images/login-ill.png';
+import logo from '../../components/images/blacklogo.png';
 
 // ----------------------------------------------------------------------
 
@@ -93,8 +92,7 @@ export default function Login(props) {
             Sign in
           </Typography>
 
-            <Typography sx={{ color: 'secondary', mb: 5 }}>Find the perfect job, stress-free.</Typography>
-            <AuthSocial/>
+            <Typography sx={{ color: 'secondary', mb: 5 }}>Prospect for business.</Typography>            
             <Box component="form" noValidate sx={{ mt: 1 }}>            
               <TextField
                 color='secondary'
@@ -153,7 +151,7 @@ export default function Login(props) {
               </Link>
               </Grid>
               <Grid item>
-              <Link to="/register" component={RouterLink} color='secondary' style={{ textDecoration: 'none' }}>
+              <Link to="/employer/register" component={RouterLink} color='secondary' style={{ textDecoration: 'none' }}>
                   <Button>
                       <Typography fontSize={13} color='secondary' noWrap>
                           Don't have an account? 

@@ -3,11 +3,11 @@ import { Container, Typography, Box, Button, Grid } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import {Link} from 'react-router-dom';
-import theme from '../components/theme/Dashboard';
+import theme from '../components/theme/Landing';
 import illustration from '../components/images/money.png';
 import interview from '../components/images/interview.png';
 import ghost from '../components/images/ghost.png'
-import Navbar from './navbar';
+import Navbar from './components/navbar';
 
 function home() {
   return (

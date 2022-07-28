@@ -1,10 +1,10 @@
 import React, { Component, useContext, useState } from "react";
 import {Link, useNavigate} from 'react-router-dom';
 import {Toolbar, AppBar, Grid, Typography, Drawer, Button, ThemeProvider, Box, List, ListItem, ListItemText} from '@mui/material';
-import whitelogo from '../components/images/whitelogo.png';
-import theme from '../components/theme/Dashboard';
-import {AuthContext} from '../context/authContext';
-import hamburger from '../components/images/menu.png';
+import whitelogo from '../../components/images/whitelogo.png';
+import theme from '../../components/theme/Landing';
+import {AuthContext} from '../../context/authContext';
+import hamburger from '../../components/images/menu.png';
 
 //FIXME: RECURSIVE <Link to=> behavior solved by ../PATH
 export default function Header() {    
@@ -70,7 +70,7 @@ export default function Header() {
                             </>
                         :
                             <>
-                                <Link to={"../signin"} style={{ textDecoration: 'none' }}>
+                                <Link to={"../employer/login"} style={{ textDecoration: 'none' }}>
                                     <Button variant='outlined' color='secondary'>
                                         <Typography fontSize={13} color='secondary'>
                                             Log in
