@@ -2,40 +2,49 @@ import {Box, Button, Typography, Grid, TextField, Card, CardContent, Avatar} fro
 import lightTheme from '../../components/theme/Dashboard';
 import { ThemeProvider } from '@emotion/react';
 import PostCard from './postCard';
+import { gql } from 'graphql-tag';
+import { useQuery } from '@apollo/client';
 
-export default function jobPost(){
-    var cardStyle = {
-        display: 'block',
-        transitionDuration: '0.3s',
-        height: '5vw',
-        elevation: '0'
+const GET_POSTS = gql `
+    query GetAllPost {
+        getAllPost {
+            companyName
+            jobTitle
+            location
+            remote
+            salaryMin
+            salaryMax
+            ExperienceLevel
+            interviewNum
+            jobDesc
+        }
+    }
+`
+
+
+export default function JobPost(){
+    const {data, loading, error} = useQuery(GET_POSTS);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>{error.message}</div>;
     }
     return (        
         <ThemeProvider theme={lightTheme}>        
-        <Box>
-            <Grid container direction="column" justifyContent="flex-start" alignItems="stretch">            
-                <Grid item>
-                    <Box sx={{mb: 2}}>                    
-                        <PostCard />
-                    </Box>
+            <Box>
+                <Grid container direction="column" justifyContent="flex-start" alignItems="stretch">            
+                    <Grid item>
+                        <Box sx={{mb: 2}}>                    
+                            {data.getAllPost.map((post) => (
+                                <PostCard post={post} />
+                            ))}
+                        </Box>
+                    </Grid>                   
                 </Grid>
-                <Grid item>
-                    <Box sx={{mb: 2}}>
-                        <PostCard />
-                    </Box>
-                </Grid>
-                <Grid item>
-                    <Box sx={{mb: 2}}>
-                        <PostCard />
-                    </Box>
-                </Grid>
-                <Grid item>
-                    <Box sx={{mb: 2}}>
-                        <PostCard />
-                    </Box>
-                </Grid>
-            </Grid>
-        </Box>
+            </Box>
         </ThemeProvider>        
     )
 }
