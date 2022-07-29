@@ -1,24 +1,6 @@
-import { gql } from 'graphql-tag';
-import { useQuery } from '@apollo/client';
-import { Typography, Card, Avatar, CardContent, Grid } from '@mui/material';
+import { Typography, Card, Avatar, Box, CardContent, Grid } from '@mui/material';
 
-const GET_CARD = gql `
-    query Post {
-        getPost(companyName: "Prospect") {
-            companyName
-            jobTitle
-            location
-            remote
-            salaryMin
-            salaryMax
-            ExperienceLevel
-            jobDesc
-            interviewNum
-        }
-    }
-`
-
-export default function PostCard(){
+export default function PostCard({post}){
     var cardStyle = {
         display: 'block',
         transitionDuration: '0.3s',
@@ -26,42 +8,94 @@ export default function PostCard(){
         elevation: '0'
     }
 
-    const {loading, error, data} = useQuery(GET_CARD);
-    if(loading) return 'loading...';
-    if(error) return `Error! ${error.message}`;
+    var cardMobileStyle ={
+        display: 'block',
+        height: '20',
+        elevation: '0'
+    }
+
     return (
-        <Card style={cardStyle}>
-            <CardContent>
-                <Grid container justifyContent='space-between' direction='row'>
-                    <Grid item>
-                        <Avatar></Avatar>
-                    </Grid>
-                    <Grid item>
-                        <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
-                            {data.getPost.jobTitle}
-                        </Typography>
-                        <Typography variant="h5" component="div">
-                            {data.getPost.companyName}
-                        </Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            {data.getPost.location}
-                        </Typography>
-                        <Typography variant="body2">
-                            {data.getPost.remote} 
-                        </Typography>
-                    </Grid>
-                    <Grid item>
-                        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                            {data.getPost.salaryMin} - {data.getPost.salaryMax}
-                        </Typography>
-                        <Typography variant="body2">
-                            Per Year                                    
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </CardContent>
-        </Card>
+        <>
+            <Box sx={{ display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block'}}}>
+                <Card style={cardStyle}>
+                    <CardContent>                
+                        <Grid container justifyContent='space-between' direction='row'>                        
+                            <Grid item xs={1}>
+                                <Avatar></Avatar>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                    <b>{post.jobTitle}</b>
+                                </Typography>
+                                <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                    {post.companyName}
+                                </Typography>
+                            </Grid>                        
+                            <Grid item xs={4}>
+                                <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                    <b>{post.location}</b>
+                                </Typography>
+                                <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                    {post.remote} 
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                    <b>{post.salaryMin} - {post.salaryMax}</b>
+                                </Typography>
+                                <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                    Per Year                                    
+                                </Typography>
+                            </Grid>
+                        </Grid>                
+                    </CardContent>
+                </Card>
+            </Box>
+            <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none'}}}>
+                <Card style={cardMobileStyle}>
+                    <CardContent>                
+                        <Grid container direction='column'>
+                            <Grid container justifyContent='flex-start' direction='row'>                        
+                                <Grid item xs={3}>
+                                    <Avatar sx={{ width: 60, height: 60 }}/>
+                                </Grid>
+                                <Grid item xs={9}>
+                                    <Typography sx={{ fontSize: 20 }} color="secondary" gutterBottom>
+                                        {post.companyName}
+                                    </Typography>
+                                    <Typography sx={{ fontSize: 15 }} color="secondary" gutterBottom>
+                                        <b>{post.jobTitle}</b>
+                                    </Typography>                                    
+                                </Grid>                        
+                            </Grid>
+                            <Grid container justifyContent='space-between' direction='row'>
+                                <Grid item xs={6}>
+                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        <b>{post.location}</b>
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        {post.remote} 
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container justifyContent='space-between' direction='row'>
+                                <Grid item xs={6}>
+                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        <b>{post.salaryMin} - {post.salaryMax}</b>
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
+                                        Per Year                                    
+                                    </Typography>
+                                </Grid>
+                            </Grid>               
+                        </Grid> 
+                    </CardContent>
+                </Card>
+            </Box>
+        </>
     )
 }

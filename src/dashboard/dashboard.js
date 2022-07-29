@@ -3,7 +3,7 @@ import { Container } from '@mui/system';
 import { CssBaseline, Grid, Box } from '@mui/material';
 import Layout from '../components/Layout';
 import Filters from './components/filters';
-import JobPost from './components/jobPost';
+import JobPost from './components/JobPost';
 import JobDescription from './components/jobDescription';
 import lightTheme from '../components/theme/Dashboard';
 import Navbar from './components/navbar';
