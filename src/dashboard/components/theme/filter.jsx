@@ -1,5 +1,7 @@
 import { createTheme } from "@mui/material";
 
+
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -13,13 +15,13 @@ const theme = createTheme({
           main: '#105FE1'
         },
         background: {
-            paper: '#f9f9f9',
+            paper: '#ffffff',
             default: '#ffffff'
         }
     }, 
     typography: {
         fontFamily: 'system-ui',
-        fontSize: '1.9rem',
+        fontSize: '1.2rem',
         button: {
             textTransform: "none"
           }     

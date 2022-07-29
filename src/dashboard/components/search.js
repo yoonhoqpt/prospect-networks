@@ -1,8 +1,6 @@
 import * as React from 'react';
 import Slider from '@mui/material/Slider';
 import {Button, Grid, TextField, Box, Typography} from '@mui/material';
-import theme from '../../components/theme/dashboardSearch';
-import { ThemeProvider } from '@emotion/react';
 import searchIcon from '../../components/images/searchBlack.png';
 import locationIcon from '../../components/images/location.png';
 import salaryIcon from '../../components/images/salary.png';
@@ -24,7 +22,7 @@ export default function RangeSlider() {
         <img src={searchIcon} height='15' />
       </Grid>
       <Grid item xs={11} sm={4} md={4} lg={4}>
-        <Box sx={{mx: 2}}>
+        <Box sx={{m: 2}}>
           <TextField
               color='secondary'                          
               fullWidth
@@ -39,7 +37,7 @@ export default function RangeSlider() {
         <img src={locationIcon} height='20' />
       </Grid>
       <Grid item xs={11} sm={3} md={3} lg={3}>
-        <Box sx={{mx: 2}}>
+        <Box sx={{m: 2}}>
           <TextField
               color='secondary'                          
               fullWidth
@@ -54,7 +52,7 @@ export default function RangeSlider() {
         <img src={salaryIcon} height='25' />
       </Grid>
       <Grid item xs={11} sm={3} md={3} lg={3} sx={{my: 1}}>     
-        <Box sx={{mx: 2}}>   
+        <Box sx={{m: 2}}>   
           <Slider
             getAriaLabel={() => 'Temperature range'}
             value={value}
