@@ -1,5 +1,5 @@
 import {Box, Button, Typography, Grid, TextField, Card, CardContent, Avatar} from '@mui/material';
-import lightTheme from '../../components/theme/Dashboard';
+import lightTheme from '../../components/theme/dashboardSearch';
 import { ThemeProvider } from '@emotion/react';
 import PostCard from './postCard';
 import { gql } from 'graphql-tag';
