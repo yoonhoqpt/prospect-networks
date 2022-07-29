@@ -16,10 +16,7 @@ function dashboard() {
         <ThemeProvider theme={lightTheme}>
           <CssBaseline />            
           <Navbar/>
-          <Grid container>
-            <Grid item xs={12}>
-              <Box sx={{mt:3}} />
-            </Grid>
+          <Grid container>          
             <Grid item xs={12}>
               <Searchbar />
             </Grid>
